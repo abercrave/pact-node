@@ -325,6 +325,8 @@ function extract(data: Data): Promise<void> {
 							file: data.filepath,
 							cwd: data.platformFolderPath,
 							preserveOwner: false,
+							umask: '0022',
+							dmode: '775',
 					  }),
 			)
 			.then(() => {
